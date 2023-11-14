@@ -1,4 +1,3 @@
-import Bowens from "../assets/bowens.jpg";
 import BowenSm from "../assets/bowen-sm.jpg";
 
 import { ThemeContext } from "../services/providers/ThemeContext";
@@ -7,10 +6,10 @@ export default function About() {
 	return (
 		<ThemeContext.Consumer>
 			{(theme) => (
-				<div className={theme}>
+				<div className={theme} id="about">
 					<div className="py-5 w-full flex flex-col md:flex-row px-4 md:px-[150px] items-center gap-5 bg-[whitesmoke] dark:bg-[#242424]">
-						<div className="hidden md:block md:w-1/3 bg-[#0747E7] dark:bg-[#CBEEF3] p-2 rounded-full">
-							<img src={theme == "light" ? BowenSm : Bowens} alt="" width="400" className="rounded-full" />
+						<div className="hidden md:block md:w-1/3 bg-[#0747E7] dark:bg-[#363D42] p-2 rounded-full">
+							<img src={BowenSm} alt="" width="400" className="rounded-full" style={theme == "dark" ? {filter: "grayscale(100%)"} : {}} />
 						</div>
 						<div className="md:w-2/3 dark:text-[whitesmoke]">
 							<h1 className="text-3xl font-semibold pb-3">

@@ -1,6 +1,4 @@
 import Bowen from "../assets/bowen.jpg";
-import BowenDark from "../assets/bowen-lg-dark.jpg";
-import Bowens from "../assets/bowens.jpg";
 import BowenSm from "../assets/bowen-sm.jpg";
 
 import { ThemeContext } from "../services/providers/ThemeContext";
@@ -10,7 +8,7 @@ export default function Home() {
 		<ThemeContext.Consumer>
 			{(theme) => (
 				<div className={theme}>
-					<div className="flex flex-col">
+					<div className="flex flex-col" id="home">
 						<div
 							className="md:px-20 w-full h-[50vh] md:h-[77vh] md:flex items-center"
 							style={
@@ -21,7 +19,7 @@ export default function Home() {
                                  }
 									:  {
 											background:
-												"linear-gradient(90deg, #242424 70%, #CBEEF3 30%)",
+												"linear-gradient(90deg, #242424 70%, #363D42 30%)",
 											color: "whitesmoke",
                               }
 							}
@@ -54,19 +52,21 @@ export default function Home() {
 							<div className="w-full md:w-5/12">
 								<div className="hidden md:block">
 									<img
-										src={theme == "light" ? Bowen : BowenDark}
+										src={Bowen}
 										alt=""
 										className="rounded-full h-[70vh]"
+										style={theme == "dark" ? {filter: "grayscale(100%)"} : {}}
 									/>
 								</div>
 							</div>
 						</div>
 						<div className="md:hidden flex justify-center mt-4">
 							<img
-								src={theme == "light" ? BowenSm : Bowens}
+								src={BowenSm}
 								alt=""
 								width="60%"
 								className="w-[10/12] rounded-full border-4 border-[#0747E7] dark:border-[#CBEEF3]"
+								style={theme == "dark" ? {filter: "grayscale(100%)"} : {}}
 							/>
 						</div>
 					</div>
