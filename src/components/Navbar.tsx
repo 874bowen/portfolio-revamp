@@ -3,13 +3,18 @@ import { ThemeContext } from "../services/providers/ThemeContext";
 import NavLink from "./ui/NavLink";
 import { MenuBars, MoonSvg, SunSvg } from "./ui/svgs/Svgs";
 
-export default function Navbar({ toggleTheme }) {
+type NavbarProps = {
+	toggleTheme: () => void;
+};
+
+export default function Navbar(props: NavbarProps) {
+	const {toggleTheme} = props;
    const [sideBarOpen, setSideBarOpen] = useState(false);
 	return (
 		<ThemeContext.Consumer>
 			{(theme) => (
 				<div className={theme}>
-					<div className="hidden md:flex h-[70px] fixed w-full bg-[whitesmoke] dark:bg-[#242424] dark:text-[whitesmoke] items-center">
+					<div className="hidden md:flex h-[70px] fixed z-10 w-full bg-[whitesmoke] dark:bg-[#242424] dark:text-[whitesmoke] items-center border-b border-b-1 border-[#0747E7] dark:border-[#363D42]">
 						<div className="w-full flex justify-between mx-20">
 							<div className="md:flex md:items-center md:gap-5">
 								<NavLink />
