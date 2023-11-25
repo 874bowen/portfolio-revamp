@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
 
 function App() {
 	const [theme, setTheme] = useState("light");
@@ -23,6 +24,7 @@ function App() {
 				<Home />
 				<About />
 				<Projects />
+				<Experience />
 			</ThemeContext.Provider>
 		</div>
 	);
