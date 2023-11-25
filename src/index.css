@@ -16,6 +16,12 @@
 .shadow-dark {
   text-shadow: 3px 2px 3px #242424;
 }
+
+/* .project-img {
+  width: 350px;
+  max-height: 500px;
+  object-fit: cover;
+} */
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
